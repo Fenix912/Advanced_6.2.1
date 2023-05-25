@@ -1,4 +1,4 @@
-package comm.example.configclient;
+package configclient.example.configclient;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

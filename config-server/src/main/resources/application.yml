@@ -1,15 +1,18 @@
 server:
-  port: 7777
+  port: 4444
+
 spring:
+  application:
+    name: config-server
   profiles:
     active: native
+
   cloud:
     config:
       server:
         native:
-          search-locations: file:///C:/Users/conf
-  application:
-    name: config-server
+          search-locations: C:/Users/conf
+
 eureka:
   client:
     serviceUrl:
