@@ -11,5 +11,4 @@ public interface BookServiceClient {
 
     @GetMapping("/api/books")
     List<Book> getAllBooks();
-
 }
