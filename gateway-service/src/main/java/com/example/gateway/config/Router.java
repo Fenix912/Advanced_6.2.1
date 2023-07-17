@@ -17,11 +17,11 @@ public class Router {
     @Bean
     public RouteLocator routes(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route("client", r -> r.path("/api/client/**")
-                        .filters(f -> f.filter(filter))
-//                        .filters(f ->                  f.rewritePath("/api/book-service/(?.*)","/${remains}")
-//                                .addRequestHeader("X-book-Header", "book-service-header")
-                        .uri("lb://CLIENT-SERVICE/"))
-                .build();
+                .route("book-service",
+                        r -> r
+                                .path("/api/**")
+                                .filters(f -> f.filter(filter))
+                                .uri("http://localhost:8888"))
+                                .build();
     }
 }

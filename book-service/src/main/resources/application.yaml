@@ -8,7 +8,7 @@ spring:
   application:
     name: book-service
   config:
-    import: "optional:config-server:"
+    import: "optional:configserver:"
   profiles:
     active: native
   data:
